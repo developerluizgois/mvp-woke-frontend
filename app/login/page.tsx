@@ -50,9 +50,9 @@ function Login() {
       />
       <div className="bg-[#F1F4F8] flex flex-col justify-between p-6 xl:p-16 gap-10 rounded-md xl:w-[50%] xl:h-[100%]">
         <header>
-          <span className="bg-[#3C36FF] px-[15px] py-[7px] font-medium text-[#f2f2f2] rounded-full">
+          <Link href="/" className="bg-[#3C36FF] px-[15px] py-[7px] font-medium text-[#f2f2f2] rounded-full">
             WOKE
-          </span>
+          </Link>
         </header>
         <div className="flex flex-col gap-6">
           <h2 className="text-[32px]">Conecte-se com as melhores empresas</h2>
