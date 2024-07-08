@@ -6,11 +6,14 @@ import { useRouter } from "next/navigation";
 import Person from "../images/person/jake-nackos-IF9TK5Uy-KI-unsplash.jpg";
 import Image from "next/image";
 import { enqueueSnackbar, SnackbarProvider } from "notistack";
+import Cookies from "js-cookie"
 import Link from "next/link";
+import { useUserData } from "../context/UserContext";
 
 function Login() {
   const [usernameOrEmail, setUsernameOrEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const { setUser } = useUserData();
   const router = useRouter();
 
   const handleLogin = async (event: React.FormEvent) => {
@@ -31,7 +34,9 @@ function Login() {
         enqueueSnackbar(response.message, {
           variant: "success",
         });
-        router.push("/");
+        Cookies.set("token-woke-mvp", response.token);
+        setUser(response.user);
+        router.push("/dashboard");
       }
     } catch (error: any) {
       enqueueSnackbar("Ocorreu um erro desconhecido.", {

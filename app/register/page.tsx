@@ -6,7 +6,9 @@ import { enqueueSnackbar, SnackbarProvider } from "notistack";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Person from "../images/person/jake-nackos-IF9TK5Uy-KI-unsplash.jpg";
+import Cookies from "js-cookie"
 import { registerUser } from "../services/api";
+import { useUserData } from "../context/UserContext";
 
 function Register() {
   const [username, setUsername] = useState<string>("");
@@ -15,6 +17,7 @@ function Register() {
   const [password, setPassword] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [dateOfBirth, setDateOfBirth] = useState<string>("");
+  const { setUser } = useUserData();
   const router = useRouter();
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,7 +51,9 @@ function Register() {
         enqueueSnackbar(response.message, {
           variant: "success",
         });
-        router.push("/");
+        Cookies.set("token-woke-mvp", response.token);
+        setUser(response.user);
+        router.push("/dashboard");
       }
     } catch (error: any) {
       enqueueSnackbar("Ocorreu um erro desconhecido.", {

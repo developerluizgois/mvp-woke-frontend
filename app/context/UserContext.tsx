@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
-interface UserData {
+export interface UserData {
   _id: string;
   username: string;
   fullName: string;
