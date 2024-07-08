@@ -147,7 +147,7 @@ const Dashboard = () => {
         <span>Telefone: {user?.phone}</span>
         <span>Data de aniversário: {formattedDateOfBirth}</span>
       </div>
-      <form onSubmit={handleSendData} className="flex flex-col gap-4 mt-10 p-4">
+      <form onSubmit={handleSendData} className="flex flex-col gap-4 mt-10 p-4 lg:w-[50vw] m-[auto]">
         <label htmlFor="company" className="flex flex-col gap-2 font-medium">
           Para qual empresa deseja enviar seus dados?
           <select
