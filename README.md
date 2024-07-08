@@ -21,6 +21,12 @@ Antes de começar, verifique se você tem instalado em sua máquina:
 
 > **Nota:** A aplicação esta utilizando Docker. A escolha foi devido à sua capacidade de criar contêineres portáteis e isolados, garantindo consistência na execução em diferentes ambientes. Isso simplifica a gestão de dependências, melhora a segurança e facilita a escalabilidade, tornando a aplicação robusta e fácil de implantar.
 
+**Inicie o serviço Back-End**
+* Acesse o repositório através do link abaixo:
+[Repositório Back-End](https://github.com/developerluizgois/mvp-woke-backend)
+* Siga o passo a passo no README de Instalação, Ambiente de desenvolvimento e Iniciar o Servidor.
+* Após completar os passos, você terá um serviço Back-End Docker sendo executado. Siga os proximos passos nesse repositório para iniciar o serviço front-end.
+
 ## Instalação
 
 Passos para instalar o ambiente de desenvolvimento.
@@ -39,11 +45,6 @@ ou
 
 yarn install
 ```
-**4. Inicie o serviço Back-End**
-* Acesse o repositório através do link abaixo:
-[Repositório Back-End](https://github.com/developerluizgois/mvp-woke-backend)
-* Siga o passo a passo no README de Instalação, Ambiente de desenvolvimento e Iniciar o Servidor.
-* Após completar os passos, você terá um serviço Back-End Docker sendo executado.
 
 ## Iniciar o servidor
 
